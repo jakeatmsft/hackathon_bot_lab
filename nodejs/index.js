@@ -23,8 +23,8 @@ const LANGUAGE_PREFERENCE = 'language_preference';
 // Create adapter.
 // See https://aka.ms/about-bot-adapter to learn more.
 const adapter = new BotFrameworkAdapter({
-    appId: null, //process.env.MicrosoftAppId,
-    appPassword: null //process.env.MicrosoftAppPassword
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
 });
 
 // Catch-all for errors.
@@ -56,7 +56,7 @@ const translator = new MicrosoftTranslator(process.env.translatorKey);
 adapter.use(new TranslatorMiddleware(translator, languagePreferenceProperty));
 
 // Create the main dialog.
-let bot = new DispatchBot(userState, languagePreferenceProperty, logger);
+let bot = new DispatchBot(userState, languagePreferenceProperty, logger, translator);
 
 // Create HTTP server
 let server = restify.createServer();

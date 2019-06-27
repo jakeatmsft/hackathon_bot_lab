@@ -17,8 +17,9 @@ class DispatchBot extends ActivityHandler {
      * @param {Object} userState User state object.
      * @param {Object} languagePreferenceProperty Accessor for language preference property in the user state.
      * @param {any} logger object for logging events, defaults to console if none is provided
+     * @param {any} translator
      */
-    constructor(userState, languagePreferenceProperty, logger) {
+    constructor(userState, languagePreferenceProperty, logger, translator) {
         super();
         if (!userState) {
             throw new Error('[MultilingualBot]: Missing parameter. userState is required');
@@ -30,10 +31,14 @@ class DispatchBot extends ActivityHandler {
             logger = console;
             logger.log('[MultilingualBot]: logger not passed in, defaulting to console');
         }
+        if (!translator) {
+            throw new Error('[MultilingualBot]: Missing parameter. translator is required');
+        }
 
         this.userState = userState;
         this.languagePreferenceProperty = languagePreferenceProperty;
         this.logger = logger;
+        this.translator = translator;
 
         const dispatchRecognizer = new LuisRecognizer({
             applicationId: process.env.LuisAppId,
@@ -73,6 +78,15 @@ class DispatchBot extends ActivityHandler {
                 
                 await this.userState.saveChanges(context);
             } else {
+                // If language preference is Spanish, translate input spanish text to english, 
+                // Then pass english translation to Dispatcher for LUIS/QnA recognition
+                const currentLang = await this.languagePreferenceProperty.get(context);
+                if(currentLang == "es") {
+                    var translatedText = await this.translator.translate(context.activity.text, "en");
+                    context.activity.text = translatedText;
+                    await context.sendActivity(translatedText);
+                }
+
                 // First, we use the dispatch model to determine which cognitive service (LUIS or QnA) to use.
                 const recognizerResult = await dispatchRecognizer.recognize(context);
 
@@ -126,7 +140,7 @@ class DispatchBot extends ActivityHandler {
         const intent = result.topScoringIntent.intent;
 
         await context.sendActivity(`HomeAutomation top intent ${ intent }.`);
-        await context.sendActivity(`HomeAutomation intents detected:  ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
+        //await context.sendActivity(`HomeAutomation intents detected:  ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
 
         if (luisResult.entities.length > 0) {
             await context.sendActivity(`HomeAutomation entities were found in the message: ${ luisResult.entities.map((entityObj) => entityObj.entity).join('\n\n') }.`);
@@ -141,7 +155,7 @@ class DispatchBot extends ActivityHandler {
         const topIntent = result.topScoringIntent.intent;
 
         await context.sendActivity(`ProcessWeather top intent ${ topIntent }.`);
-        await context.sendActivity(`ProcessWeather intents detected:  ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
+        //await context.sendActivity(`ProcessWeather intents detected:  ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
 
         if (luisResult.entities.length > 0) {
             await context.sendActivity(`ProcessWeather entities were found in the message: ${ luisResult.entities.map((entityObj) => entityObj.entity).join('\n\n') }.`);

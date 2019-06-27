@@ -43,7 +43,7 @@ class TranslatorMiddleware {
             // Translate messages sent to the user to user language
             if (shouldTranslate) {
                 for (const activity of activities) {
-                    await this.translateMessageActivity(activity, userLanguage);
+                    //await this.translateMessageActivity(activity, userLanguage);
                 }
             }
             return await nextSend();

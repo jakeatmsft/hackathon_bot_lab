@@ -32,7 +32,7 @@ class MicrosoftTranslator {
             .then(res => res.json())
             .then(responseBody => {
                 if (responseBody && responseBody.length > 0) {
-                    return text+"\n~:"+responseBody[0].translations[0].text;
+                    return responseBody[0].translations[0].text;
                 } else {
                     return text;
                 }
