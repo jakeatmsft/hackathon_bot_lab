@@ -1,0 +1,14 @@
+C:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\bin\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.deps.json
+C:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\bin\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.runtimeconfig.json
+C:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\bin\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.runtimeconfig.dev.json
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\bin\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.dll
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\bin\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.pdb
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.csprojAssemblyReference.cache
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.csproj.CoreCompileInputs.cache
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.RazorAssemblyInfo.cache
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.RazorAssemblyInfo.cs
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.AssemblyInfoInputs.cache
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.AssemblyInfo.cs
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.RazorTargetAssemblyInfo.cache
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.dll
+c:\repos\git\BotBuilder-Samples\samples\csharp_dotnetcore\14.nlp-with-dispatch\obj\Debug\netcoreapp2.1\NLP-With-Dispatch-Bot.pdb
