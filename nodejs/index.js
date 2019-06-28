@@ -23,8 +23,8 @@ const LANGUAGE_PREFERENCE = 'language_preference';
 // Create adapter.
 // See https://aka.ms/about-bot-adapter to learn more.
 const adapter = new BotFrameworkAdapter({
-    appId: process.env.MicrosoftAppId,
-    appPassword: process.env.MicrosoftAppPassword
+    appId: null,//process.env.MicrosoftAppId,
+    appPassword: null//process.env.MicrosoftAppPassword
 });
 
 // Catch-all for errors.
