@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/7fd76d0f-84f2-498b-a997-e0d059af5ce1/resourceGroups/wu2_fsiccbotrg/providers/Microsoft.Web/sites/wu2fsiccbotsvc",
-    "appService.deploySubpath": ""
-}

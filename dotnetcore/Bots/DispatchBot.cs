@@ -58,11 +58,11 @@ namespace Microsoft.BotBuilderSamples
                 // Save the user profile updates into the user state.
                 await _userState.SaveChangesAsync(turnContext, false, cancellationToken);
             } else {
-                var currentLang = await _languagePreference.GetAsync(turnContext);
-                if(currentLang == "es") {
-                    var translatedText = await _translator.TranslateAsync(turnContext.Activity.Text, "en", cancellationToken);
-                    turnContext.Activity.Text = translatedText;
-                }
+                //var currentLang = await _languagePreference.GetAsync(turnContext);
+                //if(currentLang == "es") {
+                //    var translatedText = await _translator.TranslateAsync(turnContext.Activity.Text, "en", cancellationToken);
+                //    turnContext.Activity.Text = translatedText;
+                //}
 
                 // First, we use the dispatch model to determine which cognitive service (LUIS or QnA) to use.
                 var recognizerResult = await _botServices.Dispatch.RecognizeAsync(turnContext, cancellationToken);
