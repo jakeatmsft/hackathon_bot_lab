@@ -1,0 +1,17 @@
+{
+    "name": "echo",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3978/api/messages",
+            "id": "6046b8b0-9c13-11e9-afd9-3de4525be5a7",
+            "name": "http://localhost:3978/api/messages"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null
+}
