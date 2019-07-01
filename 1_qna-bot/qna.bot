@@ -1,0 +1,18 @@
+{
+    "name": "qna",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "cdc9ac7b-94f6-43f4-ae11-ccaf0cff9819",
+            "appPassword": "h!Qg61EUWN&aBSt7YBW&FSJk}Gb-)G#{",
+            "endpoint": "http://localhost:3978/api/messages",
+            "id": "50d72db0-9c40-11e9-8259-25c574f3a2e8",
+            "name": "http://localhost:3978/api/messages"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "C:\\repos\\git\\voya_hack_bot\\1_qna-bot\\qna.bot"
+}

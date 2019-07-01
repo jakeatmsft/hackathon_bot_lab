@@ -1,4 +1,0 @@
-Label	LabelName	Samples
-0	l_HomeAutomation	38
-1	l_Weather	26
-2	q_sample-qna	6844
