@@ -100,7 +100,7 @@ class DispatchBot extends ActivityHandler {
         });
 
         this.onMembersAdded(async (context, next) => {
-            const welcomeText = 'Type a greeting or a question about the weather to get started.';
+            const welcomeText = 'Type a greeting or a question about the weather to get started. \nYour current language is English (en), to change to spanish type \'es\'.';
             const membersAdded = context.activity.membersAdded;
 
             for (let member of membersAdded) {
